@@ -3,7 +3,7 @@
     <div class="card-header">
         {{title}} <br/>
     </div>
-    
+
     <div class="card-body">
         <div class="row">
             <div class="col-md-2"> Designation Filter:</div>
@@ -22,7 +22,9 @@
                     <thead>
                         <tr>
                             <th>
-                                <button class="btn btn-primary" >avatar</button>
+                                <button class="btn btn-primary" (click)="toggleIcon()">
+                                    {{showIcon?"Hide":"Show"}} avatar
+                                </button>
                             </th>
                             <th>First Name</th>
                             <th>Last Name</th>
@@ -34,7 +36,15 @@
                     <tbody>
                         @for(employee of employees; track employee.id){
                             <tr>
-                                <td> image </td>
+                                <td> 
+                                    @if(showIcon){
+                                        <img [src]="employee.icon"/> 
+                                    }
+                                    @else{
+                                        No Image
+                                    }
+                                </td>
+                            
                                 <td>{{employee.firstName}}</td>
                                 <td>{{employee.lastName}}</td>
                                 <td>{{employee.designation}}</td>
