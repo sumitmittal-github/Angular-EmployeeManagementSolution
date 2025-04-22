@@ -23,7 +23,7 @@ export class EmployeesComponent implements OnInit {
 
   title: string = "Employee Management Solution";
   employees: Employee[] = employees;
-  showIcon: boolean = false;
+  showIcon: boolean = true;
 
   toggleIcon() {
     this.showIcon = !this.showIcon;
