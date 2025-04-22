@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import employees from './data/employees.json';
+import { CurrenyFormatterPipe } from '../pipe/curreny-formatter.pipe';
 
 @Component({
   selector: 'app-employees',
-  imports: [],
+  imports: [CommonModule, CurrenyFormatterPipe],
   templateUrl: './employees.component.html',
   styleUrl: './employees.component.scss'
 })

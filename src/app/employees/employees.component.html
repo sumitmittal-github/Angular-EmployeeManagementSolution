@@ -48,7 +48,7 @@
                                 <td>{{employee.firstName}}</td>
                                 <td>{{employee.lastName}}</td>
                                 <td>{{employee.designation}}</td>
-                                <td>{{employee.insuranceBalance}}</td>
+                                <td>{{employee.insuranceBalance| currency:"INDIA"| currenyFormatter:"Rs. "}}</td>
                                 <td>{{employee.rbtProgress}}</td>
                             </tr>    
                         }
