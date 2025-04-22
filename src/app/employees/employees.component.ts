@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import employees from './data/employees.json';
 import { CurrenyFormatterPipe } from '../pipe/curreny-formatter.pipe';
+import { Employee } from '../models/Employees.model';
 
 @Component({
   selector: 'app-employees',
@@ -21,7 +22,7 @@ export class EmployeesComponent implements OnInit {
   }
 
   title: string = "Employee Management Solution";
-  employees: any[] = employees;
+  employees: Employee[] = employees;
   showIcon: boolean = false;
 
   toggleIcon() {
