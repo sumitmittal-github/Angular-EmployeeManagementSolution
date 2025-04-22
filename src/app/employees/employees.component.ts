@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import employees from './data/employees.json';
 
 @Component({
   selector: 'app-employees',
@@ -18,5 +19,6 @@ export class EmployeesComponent implements OnInit {
   }
 
   title: string = "Employee Management Solution";
+  employees: any[] = employees;
 
 }

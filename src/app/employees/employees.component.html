@@ -1,9 +1,9 @@
 <div class="card">
 
     <div class="card-header">
-        {{title}}
+        {{title}} <br/>
     </div>
-
+    
     <div class="card-body">
         <div class="row">
             <div class="col-md-2"> Designation Filter:</div>
@@ -17,20 +17,34 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th><button class="btn btn-primary"> show avatar </button></th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Designation</th>
-                        <th>Insurance Balance</th>
-                        <th>RBT progress</th>
-                    </tr>
-                </thead>
-                <tbody>                    
-                </tbody>
-            </table>
+            @if(employees.length){
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button class="btn btn-primary" >avatar</button>
+                            </th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Designation</th>
+                            <th>Insurance Balance</th>
+                            <th>RBT progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(employee of employees; track employee.id){
+                            <tr>
+                                <td> image </td>
+                                <td>{{employee.firstName}}</td>
+                                <td>{{employee.lastName}}</td>
+                                <td>{{employee.designation}}</td>
+                                <td>{{employee.insuranceBalance}}</td>
+                                <td>{{employee.rbtProgress}}</td>
+                            </tr>    
+                        }
+                    </tbody>
+                </table>    
+            }
         </div>
     </div>
 </div>
