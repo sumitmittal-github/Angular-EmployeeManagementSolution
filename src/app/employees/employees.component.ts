@@ -17,4 +17,6 @@ export class EmployeesComponent implements OnInit {
     console.log('Method not implemented.');
   }
 
+  title: string = "Employee Management Solution";
+
 }
