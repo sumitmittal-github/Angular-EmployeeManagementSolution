@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular-EmployeeManagementSolution": {
+    "angular-employee-management-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-employee-management-solution",
+            "outputPath": "dist/angular-employee-management-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Angular-EmployeeManagementSolution:build:production"
+              "buildTarget": "angular-employee-management-app:build:production"
             },
             "development": {
-              "buildTarget": "Angular-EmployeeManagementSolution:build:development"
+              "buildTarget": "angular-employee-management-app:build:development"
             }
           },
           "defaultConfiguration": "development"
